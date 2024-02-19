@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+/**400**/
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap');
+
+/**400,600,700**/
+:root {
+    --Nutmeg: hsl(14, 45%, 36%);
+    --DarkRaspberry: hsl(332, 51%, 32%);
+    --White: hsl(0, 0%, 100%);
+    --RoseWhite: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --LightGrey: hsl(30, 18%, 87%);
+    --WengeBrown: hsl(30, 10%, 34%);
+    --DarkCharcoal: hsl(24, 5%, 18%);
+    --paragraphZise: 16px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5rem;
+}
+
+/**Fonts**/
+h1.recipe-name,
+.title-part {
+    font-family: 'Young Serif';
+    font-weight: 400;
+}
+
+p,
+.preparation-wrap h2,
+.preparation-wrap ul,
+ul.first-content-part,
+ol.first-content-part,
+table td  {
+    font-family: 'Outfit';
+}
+
+body {
+    background-color: var(--RoseWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    background-color: var(--White);
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+section main {
+    padding: 30px;
+}
+
+h1.recipe-name {
+    font-size: 2.2rem;
+    color: var(--DarkCharcoal);
+    line-height: 2.5rem;
+}
+
+p.description {
+    font-size: var(--paragraphZise);
+    color: var(--WengeBrown);
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.preparation-wrap {
+    background-color: var(--RoseWhite);
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.preparation-wrap h2 {
+    color: var(--DarkRaspberry);
+    font-weight: 600;
+}
+
+.preparation-wrap ul {
+    padding: 10px 20px 10px 10px;
+    font-weight: 400;
+    color: var(--WengeBrown);
+    list-style-type: none;
+}
+
+.preparation-wrap ul li {
+    margin-top: 10px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.preparation-wrap ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 25px;
+}
+
+.title-part {
+    margin-top: 30px;
+    font-size: 30px;
+    color: var(--Nutmeg);
+}
+
+.first-content-part {
+    margin-top: 15px;
+}
+
+ul.first-content-part,
+ol.first-content-part {
+    padding: 0 20px 30px;
+    color: var(--WengeBrown);
+    border-bottom: 2px solid var(--LightGrey);
+}
+
+ul.first-content-part li,
+ol.first-content-part li {
+    padding: 0 0 0 20px;
+    color: var(--WengeBrown);
+    padding-left: 20px;
+}
+
+ol.first-content-part li::marker {
+    font-weight: 600;
+}
+
+p.first-content-part {
+    color: var(--WengeBrown);
+    margin-bottom: 20px;
+}
+
+table {
+    color: var(--WengeBrown);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr {
+    border-bottom: 2px solid var(--LightGrey);
+}
+
+tr:last-child {
+    border: none;
+}
+
+tr td{
+    padding: 10px;
+}
+
+tr td:first-child {
+    padding-left: 25px;
+}
+
+tr td:last-child {
+    color: var(--Nutmeg);
+    font-weight: 600;
+}
+
+
+/**Desktop style**/
+@media (min-width: 1024px) {
+
+    section {
+        width: 720px;
+        margin: 100px 0;
+        padding: 35px 35px 0 35px;
+        border-radius: 25px;
+    }
+
+    section img {
+        border-radius: 10px;
+    }
+
+    section main {
+        padding: 30px 0;
+    }
+
+    .preparation-wrap {
+        padding: 30px;
+    }
+
+    tr td:first-child {
+        padding-left: 40px;
+    }
+
+}
